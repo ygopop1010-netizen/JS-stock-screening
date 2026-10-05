@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: swing-radar
+    runtime: python
+    plan: free
+    buildCommand: python3 --version
+    startCommand: python3 server.py
+    healthCheckPath: /api/health
+    autoDeploy: false
